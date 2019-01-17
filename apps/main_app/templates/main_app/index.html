@@ -1,0 +1,123 @@
+
+
+{% load static %}
+<!doctype html>
+<html lang="ja" xmlns="http://www.w3.org/1999/html">
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'main_app/style.css' %}">
+    <title>Googleanker</title>
+</head>
+<body>
+
+<div class="container" style="padding: 20px 0">
+ <h1>GoogleRanker　ググらんかー</h1>
+    <p>
+    <a class="btn btn-primary"
+        data-toggle="collapse"
+        href="#multiCollapseExample1"
+        role="button" aria-expanded="false"
+        aria-controls="multiCollapseExample1">使い方
+    </a>
+    </p>
+    <div class="row">
+        <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample1">
+                <div class="card card-body">
+                    <p>{{ site_url }}</p>
+                    <p>サイトのタイトルやh1~6の一覧を表示します。ライバルのサイトがどんなキーワードでサイト作っている見るために作りました。
+                    <P>自分のサイトが上に行かない時は上位のサイトがどんなキーワードを使っているか調べて見ましょう。ヒントが見つかるかも</P>
+                    <p>1. 検索したいキーワードと検索件数(20~50)を入力してください</p>
+                    <p>2. Searchを押すと自動的にサイトデータの取得が開始されます</p>
+                    <p>3. 取得が終わった後にGetを押すとサイトデータが表示できます</p>
+                    <p>&nbsp;&nbsp;&nbsp;  取得には時間がかかります。ごめんね。検索が終了しているかはクローラーロボの状態を確認してください</p>
+                    <p>4. IDが表示されている状態でGetボタンを押してください</p>
+                    <p>&nbsp;&nbsp;&nbsp;   IDはSearchが終わると自動的に表示されます
+                    <p>クローラーロボの状態は3種類</p>
+                    <p>pending:保留中 => IDが入力されているを確認してGetボタンを押して下さい</p>
+                    <p>running:取得中 => しばらくしてから再度Getボタンを押して下さい</p>
+                    <p>finished:検索終了 => Getボタンを押すと検索結果が表示されます</p>
+                    <p>たとえば20件取得しようとして表示が20件に満たない事があります。その場合は30件取得するなどして下さい。</p>
+                    <p>あんまりGetを連打しないでくださいね。速くなりませんよ<p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{#ここからgoogle検索結果#}
+    <div class="container" style="padding: 20px 0">
+
+        <form action="{% url "main_app:index" %}" method="get">
+
+        <div class="form-group">
+        {{ form.search_keyword }}
+        </div>
+
+        <div class="form-group">
+        {{ form.search_count }}
+        </div>
+
+        <button type="submit" class="btn btn-primary mb-2">Search</button>
+
+        </form>
+
+    </div>
+
+
+
+    <div class="container" style="padding: 20px 0">
+    {% if task_id and unique_id != None %}
+        <h4>クローラーの状態 :【{{ status }}】</h4>
+
+    {% endif %}
+    <form action="{% url "main_app:index" %}" method="get">
+
+    <div class="form-group">
+        <label for="input_task_id">Task_ID</label>
+        {{ form.input_task_id }}
+
+    </div>
+
+    <div class="form-group">
+    <label for="input_unique_id">Unique_ID</label>
+    {{ form.input_unique_id }}
+
+    </div>
+
+        <button type="submit" class="btn btn-primary mb-2">Get</button>
+    </form>
+    </div>
+{#============ここからsite_dataの表示=======================================#}
+    <div>
+    {% if site_data != None %}
+{#    <li class="list-group" style="max-width: 1000px;">#}
+        {% for dict in site_data %}
+            {% for site_data_key, site_data_value in dict.items %}
+
+                {% if site_data_key != 'rank' %}{# 検索順位は最初に表示しているためif文で消してある#}
+                    <li class="list-group-item bg-light">{{ dict.rank }}位【{{ site_data_key }}】<br>{{ site_data_value | urlize }}</li>
+                {% endif %}
+            {% endfor %}
+            <br>
+        {% endfor %}
+
+
+    {% endif %}
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+{#</div>#}
+</div>
+</body>
+
+</html>
