@@ -32,7 +32,7 @@
     <session id="826747486">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="21" />
+          <entry key="project.closed" value="22" />
           <entry key="project.open.time.0" value="5" />
           <entry key="project.open.time.1" value="6" />
           <entry key="project.open.time.15" value="1" />
@@ -49,8 +49,9 @@
         <counts>
           <entry key="cfg" value="2" />
           <entry key="css" value="1" />
+          <entry key="gitignore" value="1" />
           <entry key="html" value="1" />
-          <entry key="py" value="34" />
+          <entry key="py" value="35" />
           <entry key="scrapy" value="1" />
         </counts>
       </usages-collector>
@@ -59,7 +60,8 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="1" />
           <entry key="Ini" value="2" />
-          <entry key="Python" value="35" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Python" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -169,11 +171,29 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/wsgi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="284">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apps/main_app/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -266,14 +286,7 @@
               <item name="googleranker" type="b2602c69:ProjectViewProjectNode" />
               <item name="googleranker" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="scrapy_app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="googleranker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="googleranker" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="scrapy_app" type="462c0819:PsiDirectoryNode" />
-              <item name="scrapy_app" type="462c0819:PsiDirectoryNode" />
+              <item name="main_app" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -380,8 +393,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="235" y="23" width="1400" height="774" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33505154" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33505154" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -395,7 +409,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.1281296" side_tool="true" weight="0.3372434" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.8718704" visible="true" weight="0.6451613" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.8718704" visible="true" weight="0.30351907" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info active="true" anchor="bottom" id="File Transfer" order="13" visible="true" weight="0.32991204" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -441,13 +455,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
           <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/main_app/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -599,8 +606,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="284">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/main_app/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
         </state>
       </provider>
     </entry>
