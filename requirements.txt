@@ -1,6 +1,6 @@
 Django==2.0.5
 scrapy==1.5.1
 scrapyd==1.2.0
-google==2.6.1
+google==2.0.1
 python-scrapyd-api==2.1.2
 
