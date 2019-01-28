@@ -1,4 +1,4 @@
-Django==2.0.5
+Django==2.0.10
 scrapy==1.5.1
 scrapyd==1.2.0
 google==2.0.1
