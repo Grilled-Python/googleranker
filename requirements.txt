@@ -3,5 +3,5 @@ scrapy==1.5.1
 scrapyd==1.2.0
 google==2.0.1
 python-scrapyd-api==2.1.2
-uwsgi
+uwsgi==2.0.17
 python-dotenv==0.10.1
